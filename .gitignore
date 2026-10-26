@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+*.gguf
+
+# raw recordings
+rawCapture/
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.webm
+
+# generated outputs
+dataset/match_*.json
+dataset/analysis_*.json

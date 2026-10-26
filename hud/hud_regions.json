@@ -1,0 +1,484 @@
+{
+  "resolution": [
+    3840,
+    1600
+  ],
+  "screens": {
+    "gameplay": {
+      "self": {
+        "legend": {
+          "roi": [
+            147,
+            1418,
+            92,
+            101
+          ],
+          "templates": {
+            "alter": "legends_self/alter.png",
+            "ash": "legends_self/ash.png",
+            "axle": "legends_self/axle.png",
+            "ballistic": "legends_self/ballistic.png",
+            "banglore": "legends_self/banglore.png",
+            "bloodhound": "legends_self/bloodhound.png",
+            "catalyst": "legends_self/catalyst.png",
+            "caustic": "legends_self/caustic.png",
+            "conduit": "legends_self/conduit.png",
+            "crypto": "legends_self/crypto.png",
+            "fuse": "legends_self/fuse.png",
+            "gibraltar": "legends_self/gibraltar.png",
+            "horizon": "legends_self/horizon.png",
+            "lifeline": "legends_self/lifeline.png",
+            "loba": "legends_self/loba.png",
+            "maggie": "legends_self/maggie.png",
+            "mirage": "legends_self/mirage.png",
+            "newcastle": "legends_self/newcastle.png",
+            "octane": "legends_self/octane.png",
+            "pathfinder": "legends_self/pathfinder.png",
+            "rampart": "legends_self/rampart.png",
+            "revenant": "legends_self/revenant.png",
+            "seer": "legends_self/seer.png",
+            "sparrow": "legends_self/sparrow.png",
+            "valkyrie": "legends_self/valkyrie.png",
+            "vantage": "legends_self/vantage.png",
+            "wattson": "legends_self/wattson.png",
+            "wraith": "legends_self/wraith.png"
+          }
+        },
+        "shield": {
+          "types": {
+            "white": {
+              "roi": [
+                263,
+                1477,
+                140,
+                12
+              ],
+              "max": 50,
+              "median_hsv": [
+                0,
+                0,
+                225
+              ]
+            },
+            "whiteAmped": {
+              "roi": [
+                263,
+                1476,
+                208,
+                13
+              ],
+              "max": 75,
+              "median_hsv": [
+                0,
+                0,
+                235
+              ]
+            },
+            "blue": {
+              "roi": [
+                263,
+                1477,
+                208,
+                12
+              ],
+              "max": 75,
+              "median_hsv": [
+                91,
+                172,
+                255
+              ]
+            },
+            "blueAmped": {
+              "roi": [
+                263,
+                1475,
+                279,
+                15
+              ],
+              "max": 100,
+              "median_hsv": [
+                90,
+                166,
+                255
+              ]
+            },
+            "purple": {
+              "roi": [
+                263,
+                1475,
+                277,
+                14
+              ],
+              "max": 100,
+              "median_hsv": [
+                145,
+                71,
+                255
+              ]
+            },
+            "purpleAmped": {
+              "roi": [
+                263,
+                1475,
+                347,
+                14
+              ],
+              "max": 125,
+              "median_hsv": [
+                145,
+                65,
+                255
+              ]
+            }
+          }
+        },
+        "weapons": {
+          "names": {
+            "roi": [
+              3236,
+              1528,
+              486,
+              40
+            ],
+            "template": "gunsInfo/names.png"
+          },
+          "magazine": {
+            "roi": [
+              3537,
+              1421,
+              210,
+              60
+            ],
+            "template": "gunsInfo/magazine.png"
+          },
+          "reserve": {
+            "roi": [
+              3537,
+              1467,
+              207,
+              56
+            ],
+            "template": "gunsInfo/reserve.png"
+          }
+        }
+      },
+      "tm1": {
+        "legend": {
+          "roi": [
+            118,
+            1262,
+            69,
+            66
+          ],
+          "templates": {
+            "alter": "legends_tm1/alter.png",
+            "ash": "legends_tm1/ash.png",
+            "axle": "legends_tm1/axle.png",
+            "ballistic": "legends_tm1/ballistic.png",
+            "banglore": "legends_tm1/banglore.png",
+            "bloodhound": "legends_tm1/bloodhound.png",
+            "catalyst": "legends_tm1/catalyst.png",
+            "caustic": "legends_tm1/caustic.png",
+            "conduit": "legends_tm1/conduit.png",
+            "crypto": "legends_tm1/crypto.png",
+            "fuse": "legends_tm1/fuse.png",
+            "gibraltar": "legends_tm1/gibraltar.png",
+            "horizon": "legends_tm1/horizon.png",
+            "lifeline": "legends_tm1/lifeline.png",
+            "loba": "legends_tm1/loba.png",
+            "maggie": "legends_tm1/maggie.png",
+            "mirage": "legends_tm1/mirage.png",
+            "newcastle": "legends_tm1/newcastle.png",
+            "octane": "legends_tm1/octane.png",
+            "pathfinder": "legends_tm1/pathfinder.png",
+            "rampart": "legends_tm1/rampart.png",
+            "revenant": "legends_tm1/revenant.png",
+            "seer": "legends_tm1/seer.png",
+            "sparrow": "legends_tm1/sparrow.png",
+            "valkyrie": "legends_tm1/valkyrie.png",
+            "vantage": "legends_tm1/vantage.png",
+            "wattson": "legends_tm1/wattson.png",
+            "wraith": "legends_tm1/wraith.png"
+          }
+        },
+        "shield": {
+          "types": {
+            "white": {
+              "roi": [
+                206,
+                1302,
+                95,
+                6
+              ],
+              "max": 50,
+              "median_hsv": [
+                0,
+                0,
+                214
+              ]
+            },
+            "whiteAmped": {
+              "roi": [
+                206,
+                1301,
+                138,
+                7
+              ],
+              "max": 75,
+              "median_hsv": [
+                0,
+                0,
+                226
+              ]
+            },
+            "blue": {
+              "roi": [
+                206,
+                1302,
+                141,
+                6
+              ],
+              "max": 75,
+              "median_hsv": [
+                95,
+                183,
+                255
+              ]
+            },
+            "blueAmped": {
+              "roi": [
+                206,
+                1302,
+                184,
+                6
+              ],
+              "max": 100,
+              "median_hsv": [
+                94,
+                176,
+                255
+              ]
+            },
+            "purple": {
+              "roi": [
+                206,
+                1302,
+                186,
+                7
+              ],
+              "max": 100,
+              "median_hsv": [
+                146,
+                82,
+                255
+              ]
+            },
+            "purpleAmped": {
+              "roi": [
+                206,
+                1302,
+                230,
+                7
+              ],
+              "max": 125,
+              "median_hsv": [
+                150,
+                78,
+                255
+              ]
+            }
+          }
+        }
+      },
+      "tm2": {
+        "legend": {
+          "roi": [
+            117,
+            1165,
+            70,
+            67
+          ],
+          "templates": {
+            "alter": "legends_tm2/alter.png",
+            "ash": "legends_tm2/ash.png",
+            "axle": "legends_tm2/axle.png",
+            "ballistic": "legends_tm2/ballistic.png",
+            "banglore": "legends_tm2/banglore.png",
+            "bloodhound": "legends_tm2/bloodhound.png",
+            "catalyst": "legends_tm2/catalyst.png",
+            "caustic": "legends_tm2/caustic.png",
+            "conduit": "legends_tm2/conduit.png",
+            "crypto": "legends_tm2/crypto.png",
+            "fuse": "legends_tm2/fuse.png",
+            "gibraltar": "legends_tm2/gibraltar.png",
+            "horizon": "legends_tm2/horizon.png",
+            "lifeline": "legends_tm2/lifeline.png",
+            "loba": "legends_tm2/loba.png",
+            "maggie": "legends_tm2/maggie.png",
+            "mirage": "legends_tm2/mirage.png",
+            "newcastle": "legends_tm2/newcastle.png",
+            "octane": "legends_tm2/octane.png",
+            "pathfinder": "legends_tm2/pathfinder.png",
+            "rampart": "legends_tm2/rampart.png",
+            "revenant": "legends_tm2/revenant.png",
+            "seer": "legends_tm2/seer.png",
+            "sparrow": "legends_tm2/sparrow.png",
+            "valkyrie": "legends_tm2/valkyrie.png",
+            "vantage": "legends_tm2/vantage.png",
+            "wattson": "legends_tm2/wattson.png",
+            "wraith": "legends_tm2/wraith.png"
+          }
+        },
+        "shield": {
+          "types": {
+            "white": {
+              "roi": [
+                206,
+                1204,
+                92,
+                7
+              ],
+              "max": 50,
+              "median_hsv": [
+                0,
+                0,
+                210
+              ]
+            },
+            "whiteAmped": {
+              "roi": [
+                206,
+                1203,
+                137,
+                7
+              ],
+              "max": 75,
+              "median_hsv": [
+                0,
+                0,
+                232
+              ]
+            },
+            "blue": {
+              "roi": [
+                206,
+                1202,
+                141,
+                9
+              ],
+              "max": 75,
+              "median_hsv": [
+                91,
+                168,
+                255
+              ]
+            },
+            "blueAmped": {
+              "roi": [
+                206,
+                1203,
+                180,
+                7
+              ],
+              "max": 100,
+              "median_hsv": [
+                92,
+                171,
+                255
+              ]
+            },
+            "purple": {
+              "roi": [
+                206,
+                1203,
+                181,
+                8
+              ],
+              "max": 100,
+              "median_hsv": [
+                150,
+                72,
+                255
+              ]
+            },
+            "purpleAmped": {
+              "roi": [
+                206,
+                1204,
+                229,
+                7
+              ],
+              "max": 125,
+              "median_hsv": [
+                150,
+                72,
+                255
+              ]
+            }
+          }
+        }
+      }
+    },
+    "spectate": {
+      "screen_identifier": {
+        "roi": [
+          63,
+          1520,
+          801,
+          67
+        ],
+        "template": "screensID/spectate.png",
+        "threshold": 0.9
+      }
+    },
+    "lobby": {},
+    "inventory": {
+      "screen_identifier": {
+        "roi": [
+          1535,
+          28,
+          273,
+          70
+        ],
+        "template": "screensID/inventory.png",
+        "threshold": 0.9
+      }
+    },
+    "map": {
+      "screen_identifier": {
+        "roi": [
+          3300,
+          789,
+          371,
+          61
+        ],
+        "template": "screensID/map.png",
+        "threshold": 0.9
+      }
+    },
+    "summary": {
+      "screen_identifier": {
+        "roi": [
+          1786,
+          10,
+          267,
+          100
+        ],
+        "template": "screensID/summary.png",
+        "threshold": 0.9
+      }
+    },
+    "deathbox": {
+      "screen_identifier": {
+        "roi": [
+          673,
+          163,
+          239,
+          45
+        ],
+        "template": "screensID/deathbox.png",
+        "threshold": 0.9
+      }
+    }
+  }
+}

@@ -1,0 +1,171 @@
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.82in]{geometry}
+\usepackage{times}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{booktabs}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\setlist{nosep,leftmargin=1.4em}
+\setcounter{secnumdepth}{2}
+
+\title{\vspace{-1.5em}\textbf{SPECTRE: An Event-Driven Vision-Language\\
+Tactical Coach for Apex Legends}}
+\author{AI Systems Architecture \\ Utah State University}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-2em}
+
+\section{Introduction and Motivation}
+
+Competitive multiplayer games provide a challenging environment for
+intelligent decision support. In Apex Legends, players must continuously
+interpret their surroundings, track limited resources, coordinate with
+teammates, and make tactical decisions under strict time constraints.
+The outcome of an engagement often depends less on mechanical execution
+alone than on the timing and context of individual decisions. A player
+may lose an otherwise favorable fight by abandoning cover, failing to
+recognize an isolated opponent, or engaging without sufficient resources.
+
+Although gameplay recordings enable retrospective analysis, extracting
+meaningful lessons from them remains difficult. Conventional performance
+statistics summarize outcomes through kills, damage, and placement, but
+provide limited insight into the decisions that produced those outcomes.
+A useful coaching system must instead reconstruct the circumstances of
+an engagement, identify the information available to the player, and
+evaluate whether alternative decisions could have improved the result.
+
+Vision-language models (VLMs) offer a promising foundation for this
+task because they can jointly interpret visual scenes and generate
+natural-language explanations. However, competitive gameplay presents
+several difficulties for direct VLM analysis. Important information is
+distributed across small HUD elements, game mechanics are highly
+specialized, and meaningful events may unfold between consecutive
+sampled frames. Treating every frame as an independent image can
+therefore produce incomplete or misleading tactical interpretations.
+
+We propose \textbf{SPECTRE}, an offline tactical coaching system that
+combines conventional computer vision with temporally organized
+vision-language reasoning. Its central premise is that reliable
+extraction of structured gameplay information can reduce the perceptual
+burden on a VLM, allowing the model to concentrate on spatial context,
+decision-making, and event interpretation.
+
+\section{Problem Statement and Objectives}
+
+The problem addressed by SPECTRE is the conversion of raw gameplay
+recordings into evidence-based tactical feedback. This requires more
+than object recognition: the system must preserve relevant observations
+over time and distinguish visible facts from uncertain interpretations.
+
+The project has four objectives:
+
+\begin{enumerate}
+    \item \textbf{Structured perception:} Extract relevant HUD information,
+    including squad composition, defensive resources, equipped weapons,
+    and interface states.
+    \item \textbf{Temporal organization:} Associate observations with
+    timestamps and maintain a consistent representation of changing
+    gameplay conditions.
+    \item \textbf{Contextual interpretation:} Combine gameplay imagery
+    with structured observations to identify engagements, positioning,
+    and tactical decisions.
+    \item \textbf{Actionable feedback:} Produce concise, timestamped
+    assessments that explain observed decisions and identify defensible
+    alternatives.
+\end{enumerate}
+
+The initial scope is offline match analysis. Real-time coaching is
+considered a longer-term extension rather than a requirement of the
+first prototype.
+
+\section{Proposed Architecture}
+
+SPECTRE separates the system into three principal stages.
+
+\subsection{Visual Perception}
+
+Recorded gameplay is sampled at configurable intervals. Specialized
+computer-vision operations process predefined interface regions using
+template matching, color analysis, and optical character recognition
+where appropriate. Screen-state identification determines whether the
+player is in normal gameplay, inventory, map, spectating, or another
+interface state, preventing unrelated interface elements from being
+interpreted as gameplay measurements.
+
+This division is motivated by efficiency and reliability. Stable HUD
+elements are comparatively well suited to deterministic processing,
+whereas spatial relationships and tactical context require more
+flexible visual reasoning.
+
+\subsection{Temporal Representation}
+
+The extracted information is organized into a chronological match
+record. Each observation contains a timestamp, corresponding video
+frame, recognized screen state, and available HUD measurements.
+Information that is not visible is distinguished from information
+known to be absent. This distinction is important when the player
+changes weapons, opens an inventory, or temporarily obscures the HUD.
+
+The resulting representation provides the basis for identifying
+changes in player resources and reconstructing gameplay events across
+multiple observations.
+
+\subsection{Vision-Language Tactical Analysis}
+
+A VLM receives ordered gameplay frames together with the corresponding
+structured observations. The model is instructed to identify visible
+events, assess player positioning and resource management, and generate
+recommendations supported by the supplied evidence.
+
+The analysis explicitly distinguishes observed events from uncertain
+interpretations. For example, a visible knockdown must not be treated
+as confirmation that an entire opposing squad has been eliminated.
+
+\section{Implementation and Evaluation Plan}
+
+The prototype will be implemented in Python using OpenCV for video
+processing and HUD extraction, JSON for structured observations, and a
+locally hosted VLM for multimodal interpretation. The architecture
+will preserve intermediate outputs so that perception and reasoning
+can be evaluated independently.
+
+Evaluation will address three questions:
+
+\begin{itemize}
+    \item \textbf{Perception:} How reliably are HUD elements identified
+    across different gameplay and interface states?
+    \item \textbf{Temporal understanding:} Can the system reconstruct
+    meaningful events from sampled frames without confusing missing
+    observations with actual changes?
+    \item \textbf{Coaching quality:} Does structured HUD context help
+    produce more specific and evidence-supported recommendations than
+    analysis based on gameplay imagery alone?
+\end{itemize}
+
+Representative match segments will be inspected manually to identify
+correct observations, missed events, and unsupported conclusions.
+The initial evaluation emphasizes functional integration and
+qualitative failure analysis; larger-scale quantitative benchmarking
+will follow if time permits.
+
+\section{Expected Outcomes}
+
+The expected outcome is a working offline prototype that accepts
+recorded Apex Legends gameplay and produces a structured tactical
+report with timestamped events, observations, and recommendations.
+
+The broader contribution is architectural: SPECTRE investigates how
+deterministic perception, temporal context, and multimodal reasoning
+can be combined to support intelligent analysis of a dynamic
+environment. Future work may incorporate game-specific knowledge,
+fight-aware sampling, supervised fine-tuning, and event-driven
+inference under real-time deadlines.
+
+\end{document}
